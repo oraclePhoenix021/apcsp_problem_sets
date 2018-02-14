@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link type = "text/css" rel = "stylesheet" href = "css/style.css"/>
+    <script type = "text/javascript" src = "js/js.js"></script>
+  </head>
+  <body>
+    <table>
+      <!-- The display -->
+      <tr>
+        <th colspan = "4">
+          <div id = "display-box"><p id = "display">&nbsp;</p></div>
+        </th>
+      </tr>
+      <tr>
+        <!-- Clear -->
+        <td><button onclick = "clear0()">C</button></td>
+        <!-- Percent -->
+        <td><button onclick = "percnt()">%</button></td>
+        <!-- Switch sign -->
+        <td><button onclick = "signswitch()">+/-</button></td>
+        <!-- Divide -->
+        <td><button onclick = "divide()"><strong>÷</strong></button></td>
+      </tr>
+      <tr>
+        <!-- 9 -->
+        <td><button onclick = "nine()">9</button></td>
+        <!-- 8 -->
+        <td><button onclick = "eight()">8</button></td>
+        <!-- 7 -->
+        <td><button onclick = "seven()">7</button></td>
+        <!-- x -->
+        <td><button onclick = "multiply()">x</button></td>
+      </tr>
+      <tr>
+        <!-- 6 -->
+        <td><button onclick = "six()">6</button></td>
+        <!-- 5 -->
+        <td><button onclick = "five()">5</button></td>
+        <!-- 4 -->
+        <td><button onclick = "four()">4</button></td>
+        <!-- - -->
+        <td><button onclick = "minus()">-</button></td>
+      </tr>
+      <tr>
+        <!-- 3 -->
+        <td><button onclick = "three()">3</button></td>
+        <!-- 2 -->
+        <td><button onclick = "two()">2</button></td>
+        <!-- 1 -->
+        <td><button onclick = "one()">1</button></td>
+        <!-- + -->
+        <td rowspan = "2"><button onclick = "addition()">+</button></td>
+      </tr>
+      <tr>
+        <!-- 0 -->
+        <td><button onclick = "zero()">0</button></td>
+        <!-- . -->
+        <td><button onclick = "decimal()"><strong>.</strong></button></td>
+        <!-- = -->
+        <td><button onclick = "equal()">=</button></td>
+      </tr>
+    </table>
+  </body>
+</html>
