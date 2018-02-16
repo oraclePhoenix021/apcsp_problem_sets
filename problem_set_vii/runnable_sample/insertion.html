@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Problem Set 7</title>
+
+    <link rel="stylesheet" type="text/css" href="css/problemset7.css"/>
+    <script type="text/javascript" src="js/problemset7.js"></script>
+    <script type="text/javascript" src="js/insertion.js"></script>
+  </head>
+  <body onload="startup('sort');">
+    <div id="sort">
+      <h1>INSERTION SEARCH</h1>
+      <div id="bars" class="bars">
+
+      </div>
+      <div id="sort-results" class="results">
+        SORT RESULTS:
+      </div>
+      <div class="action-items">
+        <button id="generate-btn" class="action-item btn" onclick="generate('insertion');">Generate</button>
+        <button id="start-btn" class="action-item btn" onclick="sort();">Start</button>
+        <input id="slider" type="range" min="1" max="1000" value="500" class="action-item slider" onchange="adjustSpeed();"/>
+      </div>
+    </div>
+  </body>
+</html>

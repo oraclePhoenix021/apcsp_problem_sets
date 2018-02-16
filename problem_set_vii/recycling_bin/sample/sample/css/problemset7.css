@@ -1,0 +1,88 @@
+body {
+  background: whitesmoke;
+}
+
+h1 {
+  text-align: center;
+  font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+	font-size: 24px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: bold;
+	line-height: 26.4px;
+  letter-spacing: 3px;
+}
+
+.results {
+  text-align: center;
+  font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: bold;
+  line-height: 26.4px;
+  letter-spacing: 3px;
+}
+
+.label {
+  font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+	font-size: 12px;
+}
+
+.bars {
+  height: 400px;
+  width: 80%;
+  display: flex;
+  border: 1px solid black;
+  margin: 0 auto;
+  position: relative;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.action-items {
+  width: 70%;
+  padding: 1%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.action-item {
+  margin-left: 3%;
+  margin-right: 3%;
+}
+
+.btn {
+  flex: 1;
+}
+
+.btn:hover {
+
+}
+
+.slider {
+  flex: 2;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  background: #4CAF50;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  background: #4CAF50;
+  cursor: pointer;
+}

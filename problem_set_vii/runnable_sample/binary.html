@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Problem Set 7</title>
+
+    <link rel="stylesheet" type="text/css" href="css/problemset7.css"/>
+    <script type="text/javascript" src="js/problemset7.js"></script>
+    <script type="text/javascript" src="js/binary.js"></script>
+  </head>
+  <body onload="startup('search');">
+    <div id="search">
+      <h1>BINARY SEARCH</h1>
+      <div id="bars" class="bars">
+
+      </div>
+      <div id="search-results" class="results">
+        SEARCH RESULTS:
+      </div>
+      <div class="action-items">
+        <button id="generate-btn" class="action-item btn" onclick="generate('binary');">Generate</button>
+        <button id="start-btn" class="action-item btn" onclick="search();">Start</button>
+        <input id="slider" type="range" min="1" max="20" value="10" class="action-item slider" onchange="adjustSpeed();"/>
+      </div>
+    </div>
+  </body>
+</html>
