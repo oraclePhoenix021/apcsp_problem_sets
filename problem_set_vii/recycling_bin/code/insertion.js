@@ -218,3 +218,25 @@ function unhighlightAll() {
     unhighlight(i);
   }
 }
+
+/*
+ * Insertion sort algorithm, absent any animation. This function is unused, as
+ * its logic is replicated in the animation functions. It is here for you to
+ * review and understand the underlying logic.
+ */
+
+
+function insertionSort() {
+  do {
+    swaps=0;
+    for (var i = 0; i < list.length - 1; i++) {
+      if (list[i] > list[i + 1]) {
+        var temp = list[i];
+        list[i] = list[i + 1];
+        list[i + 1] = temp;
+
+        swaps++;
+      }
+    }
+  } while (swaps > 0);
+}
