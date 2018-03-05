@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Problem Set VI</title>
+		<link rel="icon" type="image/png" href="../images+more/logo.png">
+		<style>
+			iframe {
+				height:100vh;
+				width:100%;
+				margin:0;
+				padding:0;
+				overflow:hidden;
+			}
+			audio {
+				display:none;
+			}
+			body {
+				margin:0px;
+				padding:0px;
+				overflow:hidden;
+			}
+			#controls {
+				position:fixed;
+				right:5%;
+				bottom:5%;
+			}
+		</style>
+	</head>
+	<body>
+		<div id = "controls">
+			<img src = "../images+more/music.gif" id = "musicgif" onclick="volume()"/>&nbsp;&nbsp;
+			<img src = "../images+more/nextsong.png" style = "opacity:0.75" onclick = "nextSong()"/>
+			<!--<span onclick = "nextSong()">&nbsp;&nbsp;&nbsp;▶</span>-->
+		</div>
+		<iframe src = "index.html"  frameborder = "0"></iframe>
+		<audio autoplay = "true" onload = "volume(0)" id = "audio" src = "../images+more/Vallis Alps - Reprieve.mp3"></audio>
+		<script>
+			var sound = document.getElementById("audio");
+			sound.volume = 0.2;
+			var musicgif = document.getElementById('musicgif');
+			function volume(){
+				if (!sound.paused){
+					sound.pause();
+					musicgif.src = "../images+more/pause.png"
+				} else {
+					sound.play();
+					musicgif.src = "../images+more/music.gif";
+				}
+			}
+			var songs = ["../images+more/Vallis Alps - Reprieve.mp3",
+					   "../images+more/Vallis Alps - Thru.mp3",
+					   "../images+more/Vallis Alps - Fading.mp3",
+					   "../images+more/Vallis Alps - Serity.mp3",
+					   "../images+more/Vallis Alps - East.mp3",
+					   "../images+more/Vallis Alps - Young.mp3"
+					    /* If y'all want to add more songs, just stick the file paths in this array. */];
+			var song = 0;
+			sound.onended = function (){
+				if (song == songs.length - 1){
+					song = 0;
+				} else {
+					song++;
+				}
+				sound.src = songs[song];
+			}
+			function nextSong() {
+				if (song == songs.length - 1){
+					song = 0;
+				} else {
+					song++;
+				}
+				sound.src = songs[song];
+			}
+		</script>
+	</body>
+</html>

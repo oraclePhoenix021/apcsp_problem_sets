@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ultimate Tic-Tac-Toe</title>
+        <!--<link rel = "stylesheet" type = "text/css" href = "../css/index.css"/>-->
+        <link rel = "stylesheet" type = "text/css" href = "../css/ttt.css"/>
+        <style>
+		div {
+			display: inline-block;
+		}
+		canvas {
+			border: solid;
+			border-color: rgba(104, 104, 104, 0.5);
+			padding: 1px;
+			margin: 0;
+			background-color: rgba(255, 255, 255, 0.5);
+		}
+		#message {
+		   margin-left:22.5%;
+		   width:55%;
+		   font-size: 100%;
+		}
+		.first {
+			margin-top: 3%;
+		}
+		button {
+			margin-bottom: 5%;
+		}
+		/*.back {*/
+		/*   position:fixed;*/
+		/*   bottom:5%;*/
+		/*   left:5%;*/
+		/*   color:#6d6d6d;*/
+		/*   font-family:"Cabin",sans-serif;*/
+		/*   text-decoration: none;*/
+		/*}*/
+        </style>
+    </head>
+    <body>
+		<div id = "board" class = "first">
+			<canvas id="ttt"></canvas>
+		</div>
+		<div id = "board1" class = "first">
+			<canvas id="ttt1"></canvas>
+		</div>
+		<div id = "board2" class = "first">
+			<canvas id="ttt2"></canvas>
+		</div>
+		<br/>
+		<div id = "board3">
+			<canvas id="ttt3"></canvas>
+		</div>
+		<div id = "board4">
+			<canvas id="ttt4"></canvas>
+		</div>
+		<div id = "board5">
+			<canvas id="ttt5"></canvas>
+		</div>
+		<br/>
+		<div id = "board6">
+			<canvas id="ttt6"></canvas>
+		</div>
+		<div id = "board17">
+			<canvas id="ttt7"></canvas>
+		</div>
+		<div id = "board8">
+			<canvas id="ttt8"></canvas>
+		</div>
+		<p id="message">Welcome to Tic-Tac-Toe!</p>
+		<button onclick= "window.location.reload()">Reset</button>
+     	<script src="../js/ultimate-ttt.js"></script>
+     	<a class = "back" href = "ultimatetttDescrip.html" style = "bottom: 10%">Back</a>
+     	<a class = "back" href = "index.html">Home</a>
+    </body>
+</html>
