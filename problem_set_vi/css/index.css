@@ -1,0 +1,169 @@
+body {
+   /*background-color:#232323;*/
+   color:black;
+   text-align:center;
+   font-family:"Cabin",sans-serif;
+   z-index:0;
+   /*margin-left: 25%;*/
+   /*width: 50%;*/
+}
+a {
+  text-decoration:none;
+  color:#6d6d6d;
+}
+.link {
+   color:#ffffff;
+}
+p {
+   margin-left:22.5%;
+   width:55%
+}
+h1{
+    font-size:400%;
+    font-variant:small-caps;
+    font-family:"Oswald",sans-serif;
+}
+h2 {
+    font-size:200%;
+    /*margin-bottom:10px;*/
+    /*padding-bottom:0;*/
+    /*font-variant:small-caps;*/
+    font-family:sans-serif;
+}
+h3 {
+   font-family:"Oswald",sans-serif;
+   font-size:200%;
+}
+marquee {
+    margin:0;
+    padding:0;
+}
+.header {
+   padding-top:3%;
+   padding-bottom:3%;
+   margin-bottom:10%;
+   font-variant:small-caps;
+   position:fixed;
+   top:0;
+   left:0;
+   width:100%;
+   background-color:#232323;
+   z-index:0;
+   margin-top:0;
+   box-shadow: 0px 2px 20px #232323;
+}
+.headeritem {
+   padding-left:20px;
+   padding-right:20px;
+   font-size:150%;
+   color:#6d6d6d;
+   text-decoration:none;
+}
+.dancingqueen {
+   padding:0;
+   margin:0;
+   width:5%;
+}
+#first {
+   padding-top:5%;
+}
+.back {
+   position:fixed;
+   bottom:5%;
+   left:5%;
+   color:#6d6d6d;
+   font-family:"Cabin",sans-serif;
+   text-decoration: none;
+}
+
+.less {
+   background-color:#01001c;
+   background-color:#020023;
+   background-color:#020030;
+   background-color:#02002d;
+}
+.last {
+	margin-bottom: 5%;
+}
+#down-arrow {
+	height: 75px;
+	margin: 0px;
+	padding: 0px;
+}
+
+.data {
+   width:22.5%;
+}
+ul {
+   list-style-type:none;
+}
+#back {
+   position:fixed;
+   bottom:5%;
+   left:5%;
+   background-color:#232323;
+}
+#tttDiv, #utttDiv, #memDiv, #wordDiv {
+	/*display: inline-block;*/
+	width: 50%;
+	/*background-color: rgba(255, 255, 255, 0.5);*/
+}
+#tttDiv, #memDiv {
+	position: absolute;
+	margin-left: 20%;
+	width: 25%;
+}
+#utttDiv, #wordDiv {
+	position: absolute;
+	margin-left: 55%;
+	width: 25%;
+}
+#tttDiv, #utttDiv {
+	/*height: 235px;*/
+}
+#memDiv, #wordDiv {
+	margin-top: 250px;
+	/*margin-top: 233.265625px;*/
+}
+
+button {
+   	height: 50px;
+     width: 100px;
+     font-family: sans-serif;
+     font-size: 13px;
+     font-weight: bold;
+     text-align: center;
+     background-color: rgba(255, 255, 255, 0.5); 
+     color: black; 
+     border: 2px solid #007177;
+	transition-duration: 0.3s;
+}
+button:hover{
+	 background-color: #007177;
+    	 color: white;
+}
+
+#memory{
+    height: 200px;
+    width: 300px;
+}
+
+#tttList {
+	text-align: left;
+	font-weight: bold;
+}
+html {
+    background-image: url(../images+more/background.png);
+    /*http://static.simpledesktops.com/uploads/desktops/2015/07/28/splash7.png.625x385_q100.png*/
+    background-size: 900px;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center; 
+}
+
+ol {
+	list-style-type: none;
+	text-align: justify;
+	width: 30%;
+	margin-left: 35%;
+}
