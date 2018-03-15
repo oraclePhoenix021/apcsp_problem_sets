@@ -6,20 +6,20 @@ div.header {
     top: 0;
     /*padding-top: 3%;*/
     /*padding-bottom: 3%;*/
-    height: 10%;
+    height: 60px;
     /*margin-bottom: 10%;*/
     /*font-variant: small-caps;*/
     /*z-index: 0;*/
     /*margin-top: 0;*/
-    box-shadow: 0px 0px 10px #110f2b;
+    /*box-shadow: 0px 0px 10px #110f2b;*/
 }
 
 .header-btn {
-    height: 9.95vh;
+    height: 60px;
     width: 20vmax;
     font-family: sans-serif;
-    font-size: 13px;
-    font-weight: bold;
+    font-size: 20px;
+    letter-spacing: 5px;
     text-align: center;
     background-color: black;
     color: white;
@@ -29,14 +29,16 @@ div.header {
     border-top: none;
     border-bottom: none;
     transition-duration: 0.3s;
-    margin: 0 10px 0 10px;
+    margin: 0 3vmax 0 3vmax;
+    padding: 0;
 }
 
 button:hover.header-btn {
-    background-color: #007177;
-    color: white;
-    border-left: 3px solid #007177;
-    border-right: 3px solid #007177;
+    background-color: white;
+    color: black;
+    border-left: 3px solid white;
+    border-right: 3px solid white;
+    border-bottom-color: black;
 }
 
 .headercontent {
@@ -46,7 +48,7 @@ button:hover.header-btn {
     /*margin-right: auto;*/
     /*padding-top: 2%;*/
     position: absolute;
-    left: 33%;
+    left: 24vmax;
     /*right: 50%;*/
 }
 
@@ -60,14 +62,14 @@ div.footer {
     font-family: sans-serif;
     font-size: 10px;
     text-align: right;
+    height: 15px;
 }
 
 span.footer {
     margin: 10px;
-    padding: 5px;
 }
 
 .body {
-    padding-top: 7%;
-    padding-bottom: 1%;
+    padding-top: 40px;
+    padding-bottom: 15px;
 }
