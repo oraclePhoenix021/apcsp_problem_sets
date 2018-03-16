@@ -17,8 +17,12 @@
         </div>
         
         <div class="body">
-            <button class="tab" id="caeser-tb" onclick="julius()">CAESER</button>
-            <button class="tab" id="vigenere-tb" onclick="dudefrancais()">VIGEN&Egrave;RE</button>
+            <!-- TABS -->
+            <div class="tb-container">
+                <button class="tab" id="caeser-tb" onclick="descrip(event, 'caesar', 'caeser-tb', 'vigenere-tb')">CAESER</button>
+                <button class="tab" id="vigenere-tb" onclick="descrip(event, 'vigenere', 'vigenere-tb', 'caeser-tb')">VIGEN&Egrave;RE</button>
+            </div>
+            <!-- CAESER DESCRIPTION -->
             <div class="descrip" id="caesar">
                 <p>
                     The Caesar cipher is one of the earliest known and simplest ciphers.
@@ -33,13 +37,13 @@
                     employ the Caesar cipher as one element of the encryption process.
                     The widely known ROT13 'encryption' is simply a Caesar cipher
                     with an offset of 13. The Caesar cipher offers essentially no
-                    communication security, and it will be shown that it can be
-                    easily broken even by hand.
+                    communication security, and it can be easily broken even by hand.
                 </p>
                 <p style="font-size:14px; color:grey">
                     <i>Taken from <a href="http://practicalcryptography.com/ciphers/caesar-cipher/" target="_blank">Practical Cryptography</a></i>
                 </p>
             </div>
+            <!-- VIGENÈRE DESCRIPTION -->
             <div class="descrip" id="vigenere">
                 <p>
                     The Vigen&egrave;re Cipher was developed by mathematician Blaise de
@@ -57,9 +61,11 @@
                     <i>Taken from <a href="https://learncryptography.com/classical-encryption/vigenere-cipher" target="_blank">Learn Cryptography</a></i>
                 </p>
             </div>
+            <!-- IMAGES?
             <div class="img">
-                <img src="media/caeserpic.png"/>
-            </div>
+                <img src="media/caesarpic.png" id="caeserimg"/>
+                <img src="media/tabularecta.png" id="vigenereimg"/>
+            </div> -->
         </div>
         
         <div class="footer">

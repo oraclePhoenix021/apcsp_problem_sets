@@ -111,8 +111,8 @@ button.tab {
 
 #caeser-tb {
     /*background-color: #f44141;*/
-    background-color: white;
-    border: 1px inset black;
+    /*background-color: white;*/
+    /*border: 1px inset black;*/
 }
 
 #vigenere-tb {
@@ -137,10 +137,20 @@ button:hover#vigenere-tb {
     width: 50%;
 }
 
-/*#caesar {*/
-/*    display: block;*/
-/*}*/
+#caesar {
+    display: block;
+}
 
-/*#vigenere {*/
-/*    display: none;*/
-/*}*/
+#vigenere {
+    display: none;
+}
+
+.tb-container button.active {
+    background-color: white;
+    border: 1px inset black;
+}
+
+.active {
+    background-color: white;
+    border: 1px inset black;
+}
