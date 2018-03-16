@@ -5,6 +5,7 @@
         <!--<link rel="icon" type="image/gif" href="../problem_set_vi/images+more/groovin.gif"/>-->
         <link rel="icon" type="image/gif" href="http://www.artofeurope.com/groovin.gif"/>
         <link rel="stylesheet" href="css/css.css"/>
+        <script src="js/js.js"></script>
     </head>
     <body>
         <div class="header">
@@ -16,9 +17,9 @@
         </div>
         
         <div class="body">
-            <button class="tab" id="caeser-tb">CAESER</button>
-            <button class="tab" id="viginere-tb">VIGIN&Egrave;RE</button>
-            <div class="descrip">
+            <button class="tab" id="caeser-tb" onclick="julius()">CAESER</button>
+            <button class="tab" id="vigenere-tb" onclick="dudefrancais()">VIGEN&Egrave;RE</button>
+            <div class="descrip" id="caesar">
                 <p>
                     The Caesar cipher is one of the earliest known and simplest ciphers.
                     It is a type of substitution cipher in which each letter in the
@@ -39,6 +40,23 @@
                     <i>Taken from <a href="http://practicalcryptography.com/ciphers/caesar-cipher/" target="_blank">Practical Cryptography</a></i>
                 </p>
             </div>
+            <div class="descrip" id="vigenere">
+                <p>
+                    The Vigen&egrave;re Cipher was developed by mathematician Blaise de
+                    Vigen&egrave;re in the 16th century. The Vigen&egrave;re Cipher was adapted
+                    as a twist on the standard Caesar cipher to reduce the effectiveness
+                    of performing frequency analysis on the ciphertext. The cipher
+                    accomplishes this using uses a text string (for example, a word)
+                    as a key, which is then used for doing a number of alphabet
+                    shifts on the plaintext. Similar to the Caesar Cipher, but
+                    instead of performing a single alphabet shift across the entire
+                    plaintext, the Vigen&egrave;re cipher uses a key to determine several
+                    different shift amounts across the entirety of the message.
+                </p>
+                <p style="font-size:14px; color: grey">
+                    <i>Taken from <a href="https://learncryptography.com/classical-encryption/vigenere-cipher" target="_blank">Learn Cryptography</a></i>
+                </p>
+            </div>
             <div class="img">
                 <img src="media/caeserpic.png"/>
             </div>
@@ -47,5 +65,6 @@
         <div class="footer">
             <span class="footer">&copy; 19 March 2018. UCVTS. AIT. APCSP. A 3-4</span>
         </div>
+        <script src="js/js.js"></script>
     </body>
 </html>

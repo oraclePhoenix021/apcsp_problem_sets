@@ -115,7 +115,7 @@ button.tab {
     border: 1px inset black;
 }
 
-#viginere-tb {
+#vigenere-tb {
     /*background-color: #41f4b8;*/
     
 }
@@ -124,7 +124,7 @@ button:hover#caeser-tb {
     color: red;
 }
 
-button:hover#viginere-tb {
+button:hover#vigenere-tb {
     color: blue;
     display: inline-block;
     margin-right: 0;
@@ -136,3 +136,11 @@ button:hover#viginere-tb {
     font-family: sans-serif;
     width: 50%;
 }
+
+/*#caesar {*/
+/*    display: block;*/
+/*}*/
+
+/*#vigenere {*/
+/*    display: none;*/
+/*}*/
