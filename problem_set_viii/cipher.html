@@ -15,19 +15,19 @@
             </div>
         </div>
         <div class="body">
-            <input type="text" name="input" value="Hello, world!" id="input" class="block"/>
-            <select class="block">
+            <input type="text" name="input" value="Hello, world!" id="input" class="block textbox"/>
+            <select class="block dropdown" id="select-cipher">
                 <option value="" selected disabled hidden>Select cipher</option>
                 <option>Caesar</option>
                 <option>Vigin&egrave;re</option>
             </select>
-            <select class="block">
+            <select class="block dropdown" id="select-code">
                 <option value="" selected disabled hidden>Encode or decode?</option>
-                <option>Encode</option>
-                <option>Decode</option>
+                <option>Encode!</option>
+                <option>Decode!</option>
             </select>
-            <button class="block">Encode/Decode!</button>
-            <input type="text" name="output" readonly id="output" class="block"/>
+            <button class="block" id="run-btn">Encode/Decode!</button>
+            <input type="text" name="output" readonly id="output" class="block textbox"/>
         </div>
         <div class="footer">
             <span class="footer">&copy; 19 March 2018. UCVTS. AIT. APCSP. A 3-4</span>
