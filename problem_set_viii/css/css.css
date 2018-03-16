@@ -190,3 +190,27 @@ button:hover#vigenere-tb {
 .dropdown {
     height: 10%;
 }
+
+select:not(:-internal-list-box) {
+    overflow: visible !important;
+}
+user agent stylesheet
+select {
+    border-radius: 0px;
+    border-color: rgb(169, 169, 169);
+}
+
+select {
+    -webkit-appearance: menulist;
+    box-sizing: border-box;
+    align-items: center;
+    white-space: pre;
+    -webkit-rtl-ordering: logical;
+    color: black;
+    background-color: white;
+    cursor: default;
+    border-width: 1px;
+    border-style: solid;
+    /* border-color: initial; */
+    border-image: initial;
+}
