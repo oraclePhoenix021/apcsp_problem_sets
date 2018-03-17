@@ -14,7 +14,7 @@
 //     caesar.style.display = 'none'; alert('rome burned');
 // }
 
-function descrip(evt, cipher, button, otherbutton) {
+function descrip(evt, cipher, button, otherbutton, img, otherimg) {
     var description, tab;
     
     description = document.getElementsByClassName('descrip');
@@ -32,9 +32,13 @@ function descrip(evt, cipher, button, otherbutton) {
     
     document.getElementById(button).style.backgroundColor = "white";
     document.getElementById(button).style.border = "1px inset black";
+    // document.getElementById(button).style.borderBottom = "none";
     
     document.getElementById(otherbutton).style.backgroundColor = "#c1c1c1";
     document.getElementById(otherbutton).style.border = "none";
+    
+    document.getElementById(img).style.display = "block";
+    document.getElementById(otherimg).style.display = "none";
 }
 
 document.getElementById('caeser-tb').click();

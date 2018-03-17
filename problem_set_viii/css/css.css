@@ -134,6 +134,12 @@ button:hover#vigenere-tb {
     font-size: 15px;
     font-family: sans-serif;
     width: 50%;
+    border: 1px inset black;
+}
+
+.descrip-cnt {
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 #caesar {
@@ -164,7 +170,7 @@ button:hover#vigenere-tb {
 }
 /*82%*/
 #select-cipher {
-    margin: 3% 30% 1% 30%;
+    margin: 27% 30% 1% 30%;
     width: 40%;
 }
 
@@ -184,17 +190,19 @@ button:hover#vigenere-tb {
 }
 
 .textbox {
-    height: 40%;
+    position: absolute;
+    height: 20%;
 }
 
 .dropdown {
-    height: 10%;
+    position: absolute;
 }
 
+/*user agent stylesheet from laptop (cruddy chromebooks)*/
 select:not(:-internal-list-box) {
     overflow: visible !important;
 }
-user agent stylesheet
+
 select {
     border-radius: 0px;
     border-color: rgb(169, 169, 169);
@@ -213,4 +221,13 @@ select {
     border-style: solid;
     /* border-color: initial; */
     border-image: initial;
+}
+/*/////////////////end//////////////////*/
+
+img {
+    padding-top: 60px;
+    width: 30%;
+    display: inline;
+    position: fixed;
+    right: 10%;
 }
