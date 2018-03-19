@@ -5,8 +5,9 @@
         <!--<link rel="icon" type="image/gif" href="../problem_set_vi/images+more/groovin.gif"/>-->
         <link rel="icon" type="image/gif" href="http://www.artofeurope.com/groovin.gif"/>
         <link rel="stylesheet" href="css/css.css"/>
+        <script src="js/js.js"></script>
     </head>
-    <body>
+    <body onload="button()">
         <div class="header">
             <span id="title">PSET VIII</span>P
             <div class="headercontent">
@@ -16,21 +17,22 @@
         </div>
         <div class="body">
             <input type="text" name="input" value="Hello, world!" id="input" class="block textbox"/>
-            <select class="block dropdown" id="select-cipher">
-                <option value="" selected disabled hidden>Select cipher</option>
-                <option>Caesar</option>
-                <option>Vigin&egrave;re</option>
+            <select class="block dropdown" id="select-cipher" onclick="button()">
+                <option value="" selected>Select cipher</option>
+                <option value="caesar">Caesar</option>
+                <option value="vigenere">Vigen&egrave;re</option>
             </select>
-            <select class="block dropdown" id="select-code">
-                <option value="" selected disabled hidden>Encode or decode?</option>
-                <option>Encode!</option>
-                <option>Decode!</option>
+            <select class="block dropdown" id="select-code" onclick="button()">
+                <option value="" selected>Encode or decode?</option>
+                <option value="encode">Encode!</option>
+                <option value="decode">Decode!</option>
             </select>
-            <button class="block" id="run-btn">Encode/Decode!</button>
+            <button class="block" id="run-btn">&nbsp;</button>
             <input type="text" name="output" readonly id="output" class="block textbox" style="float:bottom"/>
         </div>
         <div class="footer">
             <span class="footer">&copy; 19 March 2018. UCVTS. AIT. APCSP. A 3-4</span>
         </div>
+        <script src="js/js.js"></script>
     </body>
 </html>
