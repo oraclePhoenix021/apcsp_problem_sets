@@ -90,6 +90,7 @@ span.footer {
 .body {
     padding-top: 60px;
     padding-bottom: 15px;
+    height: 100%;
 }
 
 button.tab {
@@ -208,6 +209,10 @@ img {
 .dropdown {
     position: absolute;
 } */
+
+.textbox {
+  height: 35%;
+}
 
 /*user agent stylesheet from laptop (cruddy chromebooks)*/
 select:not(:-internal-list-box) {
