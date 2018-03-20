@@ -1,3 +1,4 @@
+// HOME PAGE TABS
 // var caesar = document.getElementById('caeser');
 // var vigenere = document.getElementById('vigenere');
 
@@ -14,7 +15,6 @@
 //     caesar.style.display = 'none'; alert('rome burned');
 // }
 
-// HOME PAGE TABS
 function descrip(evt, cipher, button, otherbutton, img, otherimg) {
     var description, tab;
 
@@ -54,7 +54,7 @@ function button() {
 
   var button = document.getElementById('run-btn');
 
-  if (/*(typevalue !== "caesar" || typevalue !== "vigenere") || */(codevalue !== "encode" || codevalue == "decode")) {
+  if ((typevalue !== "caesar" || typevalue !== "vigenere") || (codevalue !== "encode" || codevalue == "decode")) {
     button.disabled = true;
   }
 
@@ -66,6 +66,27 @@ function button() {
       button.textContent = "Decode!";
     }
   }
+  
+  
+  if (typevalue == "none" || codevalue == "none") {
+    button.disabled = true;
+    if (codevalue == "none") {
+      button.innerHTML = "&nbsp";
+    }
+  }
 }
 
-document.getElementById('run-btn').textContent = "Hello";
+var alphabetArray = ['A', 'B', 'C', 'D', 'E', 'F', 'G',
+                     'H', 'I', 'J', 'K', 'L', 'M', 'N',
+                     'O', 'P', 'Q', 'R', 'S', 'T', 'U',
+                     'V', 'W', 'X', 'Y', 'Z'];
+var alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+function caesar(message, key) {
+  message = message.toUpperCase();
+  for (var i = 0; i < message.length; i++){
+    var char = message.charAt(i);
+    var alph = alphabet.indexOf(char);
+    var 
+  }
+}
