@@ -46,7 +46,10 @@ document.getElementById('caeser-tb').click();
 
 // CIPHER PAGE JS
 function buttonFunctionality() {
-  console.log(caesarEncrypt('hell', 8));
+  // console.log(caesarEncrypt('hell', 8));
+  // console.log(caesarDecrypt('pmtt', 8));
+  // console.log(vigenereEncrypt('hell', 'abc'));
+  // console.log(vigenereDecrypt('hfnl', 'abc'));
 
   var type = document.getElementById('select-cipher');
   var typevalue = type.options[type.selectedIndex].value;
@@ -77,65 +80,80 @@ function buttonFunctionality() {
   }
 }
 
-// Alphabet
-var alphabetArray = ['A', 'B', 'C', 'D', 'E', 'F', 'G',
-                     'H', 'I', 'J', 'K', 'L', 'M', 'N',
-                     'O', 'P', 'Q', 'R', 'S', 'T', 'U',
-                     'V', 'W', 'X', 'Y', 'Z'];
-var alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+function run() {
+  var type = document.getElementById('select-cipher');
+  var typevalue = type.options[type.selectedIndex].value;
 
-// function caesar(message, key) {
-//   message = message.toUpperCase();
-//   var encryptedResult = "";
-//   for (var i = 0; i < message.length; i++) {
-//     var originalCharacter = message.charAt(i);
-//     var alphabeticIndex = alphabet.indexOf(originalCharacter);
-//     if (alphabeticIndex >= 0) {
-//       var newIndex = alphabeticIndex + key;
-//       newIndex = newIndex % alphabet.length;
-//       var newCharacter = alphabet.charAt(newIndex);
-//       encryptedResult += newCharacter;
-//     } else {
-//       encryptedResult += originalCharacter;
-//     }
-//   }
-//   return encryptedResult;
-// }
+  var code = document.getElementById('select-code');
+  var codevalue = code.options[code.selectedIndex].value;
+
+  var button = document.getElementById('run-btn');
+  var message = document.getElementById('input').textContent;
+  var output = "";
+
+  if (typevalue == "caesar") {
+    if (codevalue == "encode"){
+      var key = parseInt(prompt("What is your key?"));
+      output = caesarEncrypt(message, key);
+    } else if (codevalue == "decode"){
+      var key = parseInt(prompt("What is your key?"));
+      output = caesarDecrypt(message, key);
+    }
+  } else if (typevalue == "vigenere") {
+    if (codevalue == "encode"){
+      var key = (prompt("What is your key?")).toString();
+      output = vigenereEncrypt(message, key);
+    } else if (codevalue == "decode"){
+      var key = (prompt("What is your key?")).toString();
+      output = vigenereDecrypt(message, key);
+    }
+  }
+  output = output.toString();
+  console.log(output);
+  document.getElementsByName('output')[0].value = output;
+}
 
 // Caesar Cipher
-function caesarEncrypt(text, shift) {
+function caesarEncrypt(message, key) {
+  message = message.toUpperCase();
 	var result = "";
 	var firstCharIdx = 'A'.charCodeAt(0);
 	var offset = ('z'.charCodeAt(0) - 'A'.charCodeAt(0)) + 1;
-	for (var i = 0; i < text.length; i++) {
-		var oldCharIdx = text[i].charCodeAt(0);
+	for (var i = 0; i < message.length; i++) {
+		var oldCharIdx = message[i].charCodeAt(0);
 		var oldIdxInAlphabet = oldCharIdx - firstCharIdx;
-		var newIdxInAlphabet = (oldIdxInAlphabet + shift) % offset;
+		var newIdxInAlphabet = (oldIdxInAlphabet + key) % offset;
 		var newChar = String.fromCharCode( firstCharIdx + newIdxInAlphabet );
 		result += newChar;
 	}
 	return result;
 }
 
-function caesarDecrypt(text, shift) {
-	return cipher( text, shift * -1);
+function caesarDecrypt(message, key) {
+	return caesarEncrypt(message, key * -1);
 }
 
 // Vigenère Cipher
-function vigenereEncrypt(message, key) {
-	var result = "";
-	for (var i = 0, j = 0; i < message.length; i++) {
-		var originalCharacter = message.charCodeAt(i);
-		if (65 <= originalCharacter && originalCharacter <= 90) {
-			result += String.fromCharCode((originalCharacter - 65 + key[j % key.length]) % 26 + 65);
-			j++;
-		} else if (isLowercase(c)) {
-			result += String.fromCharCode((originalCharacter - 97 + key[j % key.length]) % 26 + 97);
-			j++;
-		} else {
-			result += message.charAt(i);
-		}
-	}
-	return result;
+
+function ordA(a) {
+  return a.charCodeAt(0) - 65;
 }
-// hfnl
+
+function vigenereEncrypt(text, key, decode) {
+  var i = 0, b;
+  key = key.toUpperCase().replace(/[^A-Z]/g, '');
+  return text.toUpperCase().replace(/[^A-Z]/g, '').replace(/[A-Z]/g, function(a) {
+    b = key[i++ % key.length];
+    return String.fromCharCode(((ordA(a) + (decode ? 26 - ordA(b) : ordA(b))) % 26 + 65));
+  });
+}
+
+function vigenereDecrypt(text, key, decode) {
+  decode = true;
+  var i = 0, b;
+  key = key.toUpperCase().replace(/[^A-Z]/g, '');
+  return text.toUpperCase().replace(/[^A-Z]/g, '').replace(/[A-Z]/g, function(a) {
+    b = key[i++ % key.length];
+    return String.fromCharCode(((ordA(a) + (decode ? 26 - ordA(b) : ordA(b))) % 26 + 65));
+  });
+}
