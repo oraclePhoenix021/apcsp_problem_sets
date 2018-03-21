@@ -211,7 +211,10 @@ img {
 } */
 
 .textbox {
-  height: 35%;
+  height: 180px;
+  text-transform: uppercase;
+  font-family: monospace;
+  text-align: center;
 }
 
 /*user agent stylesheet from laptop (cruddy chromebooks)*/

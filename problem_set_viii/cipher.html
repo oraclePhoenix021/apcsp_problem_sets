@@ -16,7 +16,7 @@
             </div>
         </div>
         <div class="body">
-            <input type="text" name="input" value="Hello, world!" id="input" class="block textbox"/>
+            <input type="text" name="input" placeholder="type input here" align="top" onkeydown="return alphaOnly(event)" id="input" class="block textbox"/>
             <select class="block dropdown" id="select-cipher" onclick="buttonFunctionality()">
                 <option value="none" selected>Select cipher</option>
                 <option value="caesar">Caesar</option>
@@ -28,7 +28,7 @@
                 <option value="decode">Decode!</option>
             </select>
             <button class="block" id="run-btn" onclick="run()">&nbsp;</button>
-            <input type="text" name="output" readonly id="output" class="block textbox" style="float:bottom"/>
+            <input type="text" placeholder="output will appear here" name="output" align="top" readonly id="output" class="block textbox" style="float:bottom"/>
         </div>
         <div class="footer">
             <span class="footer">&copy; 19 March 2018. UCVTS. AIT. APCSP. A 3-4</span>

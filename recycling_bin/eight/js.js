@@ -368,3 +368,5 @@ function vigenerDecrypt(message, key){
   }
   return result;
 }
+
+// What I used finally for vigenere: https://rosettacode.org/wiki/Vigen%C3%A8re_cipher

@@ -15,6 +15,11 @@
 //     caesar.style.display = 'none'; alert('rome burned');
 // }
 
+function alphaOnly(event) {
+  var key = event.keyCode;
+  return ((key >= 65 && key <= 90) || key == 8);
+};
+
 function descrip(evt, cipher, button, otherbutton, img, otherimg) {
     var description, tab;
 
@@ -88,29 +93,34 @@ function run() {
   var codevalue = code.options[code.selectedIndex].value;
 
   var button = document.getElementById('run-btn');
-  var message = document.getElementById('input').textContent;
+  var message = document.getElementById('input').value;
   var output = "";
 
   if (typevalue == "caesar") {
     if (codevalue == "encode"){
+      // console.log("encoding caesar");
       var key = parseInt(prompt("What is your key?"));
       output = caesarEncrypt(message, key);
     } else if (codevalue == "decode"){
+      // console.log("decoding caesar");
       var key = parseInt(prompt("What is your key?"));
       output = caesarDecrypt(message, key);
     }
   } else if (typevalue == "vigenere") {
     if (codevalue == "encode"){
+      // console.log("encoding vigenere");
       var key = (prompt("What is your key?")).toString();
       output = vigenereEncrypt(message, key);
     } else if (codevalue == "decode"){
+      // console.log("decoding vigenere");
       var key = (prompt("What is your key?")).toString();
       output = vigenereDecrypt(message, key);
     }
   }
   output = output.toString();
-  console.log(output);
-  document.getElementsByName('output')[0].value = output;
+  // console.log(output);
+  var textbox = document.getElementById('output');
+  textbox.value = output;
 }
 
 // Caesar Cipher
