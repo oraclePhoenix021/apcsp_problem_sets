@@ -137,5 +137,5 @@ function vigenereEncrypt(message, key) {
 		}
 	}
 	return result;
-
+}
 // hfnl
