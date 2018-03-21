@@ -45,7 +45,9 @@ function descrip(evt, cipher, button, otherbutton, img, otherimg) {
 document.getElementById('caeser-tb').click();
 
 // CIPHER PAGE JS
-function button() {
+function buttonFunctionality() {
+  console.log(caesarEncrypt('hell', 8));
+
   var type = document.getElementById('select-cipher');
   var typevalue = type.options[type.selectedIndex].value;
 
@@ -66,8 +68,7 @@ function button() {
       button.textContent = "Decode!";
     }
   }
-  
-  
+
   if (typevalue == "none" || codevalue == "none") {
     button.disabled = true;
     if (codevalue == "none") {
@@ -76,17 +77,65 @@ function button() {
   }
 }
 
+// Alphabet
 var alphabetArray = ['A', 'B', 'C', 'D', 'E', 'F', 'G',
                      'H', 'I', 'J', 'K', 'L', 'M', 'N',
                      'O', 'P', 'Q', 'R', 'S', 'T', 'U',
                      'V', 'W', 'X', 'Y', 'Z'];
 var alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
-function caesar(message, key) {
-  message = message.toUpperCase();
-  for (var i = 0; i < message.length; i++){
-    var char = message.charAt(i);
-    var alph = alphabet.indexOf(char);
-    var 
-  }
+// function caesar(message, key) {
+//   message = message.toUpperCase();
+//   var encryptedResult = "";
+//   for (var i = 0; i < message.length; i++) {
+//     var originalCharacter = message.charAt(i);
+//     var alphabeticIndex = alphabet.indexOf(originalCharacter);
+//     if (alphabeticIndex >= 0) {
+//       var newIndex = alphabeticIndex + key;
+//       newIndex = newIndex % alphabet.length;
+//       var newCharacter = alphabet.charAt(newIndex);
+//       encryptedResult += newCharacter;
+//     } else {
+//       encryptedResult += originalCharacter;
+//     }
+//   }
+//   return encryptedResult;
+// }
+
+// Caesar Cipher
+function caesarEncrypt(text, shift) {
+	var result = "";
+	var firstCharIdx = 'A'.charCodeAt(0);
+	var offset = ('z'.charCodeAt(0) - 'A'.charCodeAt(0)) + 1;
+	for (var i = 0; i < text.length; i++) {
+		var oldCharIdx = text[i].charCodeAt(0);
+		var oldIdxInAlphabet = oldCharIdx - firstCharIdx;
+		var newIdxInAlphabet = (oldIdxInAlphabet + shift) % offset;
+		var newChar = String.fromCharCode( firstCharIdx + newIdxInAlphabet );
+		result += newChar;
+	}
+	return result;
 }
+
+function caesarDecrypt(text, shift) {
+	return cipher( text, shift * -1);
+}
+
+// Vigenère Cipher
+function vigenereEncrypt(message, key) {
+	var result = "";
+	for (var i = 0, j = 0; i < message.length; i++) {
+		var originalCharacter = message.charCodeAt(i);
+		if (65 <= originalCharacter && originalCharacter <= 90) {
+			result += String.fromCharCode((originalCharacter - 65 + key[j % key.length]) % 26 + 65);
+			j++;
+		} else if (isLowercase(c)) {
+			result += String.fromCharCode((originalCharacter - 97 + key[j % key.length]) % 26 + 97);
+			j++;
+		} else {
+			result += message.charAt(i);
+		}
+	}
+	return result;
+
+// hfnl
