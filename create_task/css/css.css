@@ -1,7 +1,14 @@
-#game {
+div, #game {
     position: absolute;
-    width: 100vw;
-    height: 100vh;
-    left: 0;
-    top: 0;
+    width: auto;
+    height: auto;
+    left: 1;
+    top: 1;
+    background-color: white;
+    font-family: "Courier New", Courier, monospace;
+}
+
+input, button {
+  font-family: "Courier New", Courier, monospace;
+  margin-right: 10px;
 }
