@@ -1,6 +1,16 @@
 var game = document.getElementById('game');
 var name = "";
 
+// CSS
+var gameWidth = game.offsetWidth;
+var gameHeight = game.offsetHeight;
+var body = document.body,
+    html = document.documentElement;
+var height = Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight);
+var pageHeight = height;
+console.log(pageHeight);
+
+// GAME
 function welcomeOnwards() {
   name = String(document.getElementById('name').value);
   contents[0][0] = "<p>"+name+", you are a child of the royal family, loved by all. However, the better a person is in this world, the worse their counterpart down below. Unbeknownst to you, your evil twin plots in the Land Below. One horrible day, you wake to find yourself not in your own bed, warm and comfortable, but in the dark underworld. Your evil counterpart has somehow found a way into the Land Above and replaced you. Ahead of you is a long and arduous journey to make it back to the top.</p><button onclick='onwards()'>Onwards!</button>";

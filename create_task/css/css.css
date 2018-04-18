@@ -1,14 +1,25 @@
 div {
     position: absolute;
-    width: auto;
-    height: auto;
+    width: 99vw;
+    /* height: 99vh; */
     left: 1;
     top: 1;
     /* background-color: white; */
     font-family: "Courier New", Courier, monospace;
+    /* display: flex; */
+    /* align-items: center; */
 }
 
 input, button {
   font-family: "Courier New", Courier, monospace;
   margin-right: 10px;
 }
+
+body {
+  text-align: center;
+  font-family: "Courier New", Courier, monospace;
+}
+
+/* h1, p, input, button {
+  display: block;
+} */
