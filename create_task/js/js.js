@@ -2,13 +2,16 @@ var game = document.getElementById('game');
 var name = "";
 
 // CSS
-var gameWidth = game.offsetWidth;
-var gameHeight = game.offsetHeight;
-var body = document.body,
-    html = document.documentElement;
-var height = Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight);
-var pageHeight = height;
-console.log(pageHeight);
+function css() {
+  var gameWidth = game.offsetWidth;
+  var gameHeight = game.offsetHeight;
+  var body = document.body, html = document.documentElement;
+  var height = Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight);
+  var pageHeight = height;
+  console.log(pageHeight);
+  var marginTop = (pageHeight/3) - (gameHeight/3);
+  game.style.paddingTop = marginTop + "px";
+}
 
 // GAME
 function welcomeOnwards() {
