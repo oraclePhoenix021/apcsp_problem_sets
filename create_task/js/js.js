@@ -2,16 +2,14 @@ var game = document.getElementById('game');
 var name = "";
 
 // CSS
-function css() {
-  var gameWidth = game.offsetWidth;
-  var gameHeight = game.offsetHeight;
-  var body = document.body, html = document.documentElement;
-  var height = Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight);
-  var pageHeight = height;
-  console.log(pageHeight);
-  var marginTop = (pageHeight/3) - (gameHeight/3);
-  game.style.paddingTop = marginTop + "px";
-}
+var gameWidth = game.offsetWidth;
+var gameHeight = game.offsetHeight;
+var body = document.body, html = document.documentElement;
+var height = Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight);
+var pageHeight = height;
+console.log(pageHeight);
+var marginTop = (pageHeight/2) - (gameHeight-(gameHeight/5));
+game.style.paddingTop = marginTop + "px";
 
 // GAME
 function welcomeOnwards() {
@@ -38,6 +36,7 @@ function onwards(option){
     ch++; pt = 0;
   }
   game.innerHTML = contents[ch][pt] + restart;
+  game.style.paddingTop = marginTop + "px";
 }
 
 var ch = 0, pt = 0;
