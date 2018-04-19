@@ -12,21 +12,21 @@ var marginTop = (pageHeight/2) - (gameHeight-(gameHeight/5));
 game.style.paddingTop = marginTop + "px";
 
 // MUSIC
-var sound = document.getElementById('audio');
-var songs = [
-  "east",
-  "fading",
-  "reprieve",
-  "serity",
-  "thru",
-  "young"
-  ];
-var song = 0;
-sound.onended = function(){
-  if (song == songs.length - 1) song = 0;
-  else song++;
-  sound.src = "media/" + songs[song] + ".mp3";
-}
+// var sound = document.getElementById('audio');
+// var songs = [
+//   "east",
+//   "fading",
+//   "reprieve",
+//   "serity",
+//   "thru",
+//   "young"
+//   ];
+// var song = 0;
+// sound.onended = function(){
+//   if (song == songs.length - 1) song = 0;
+//   else song++;
+//   sound.src = "media/" + songs[song] + ".mp3";
+// }
 
 // GAME
 function welcomeOnwards() {
