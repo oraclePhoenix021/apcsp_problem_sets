@@ -1,5 +1,6 @@
 var game = document.getElementById('game');
 var name = "";
+var answer = "";
 
 // CSS
 var gameWidth = game.offsetWidth;
@@ -37,6 +38,16 @@ function welcomeOnwards() {
   game.innerHTML = contents[0][0] + restart;
 }
 
+function check(ans) {
+  answer = String(document.getElementById('answer').value);
+  ans = String(ans);
+  var checkAnswer = answer.includes(ans);
+  if (answer == ans) {
+    alert('Good job!');
+    onwards(1);
+  }
+}
+
 function onwards(option){
   if (option == welcome){
     // game.innerHTML = welcome; console.log('restart');
@@ -66,8 +77,8 @@ var contents = [
   ['ch 5', 'good choice', 'dead choice']
 ]; console.log(contents);
 
-contents[0][0] = "<p>"+name+", you are a child of the royal family, loved by all. However, the the better a person is in this world, the worse their counterpart down below. Unbeknownst to you, your evil twin plots in the Land Below. One horrible day, you wake to find yourself not in your own bed, warm and comfortable, but in the dark underworld. Your evil counterpart has somehow found a way into the Land Above and replaced you. Ahead of you is a long and arduous journey to make it back to the top.</p><button onclick='onwards()'>Onwards!</button>";
-contents[1][0] = "<p>You trudge along, alone and hungry. You see you're in a forest, so perhaps you can find some berries, nuts, or roots, whatever those are. Story in progress.</p><button onclick='onwards(1)'>Option 1</button><button onclick='onwards(2)'>Option 2</button>";
+contents[0][0] = "<p>"+name+", you are a child of the royal family, loved by all. However, the better a person is in this world, the worse their counterpart down below. Unbeknownst to you, your evil twin plots in the Land Below. One horrible day, you wake to find yourself not in your own bed, warm and comfortable, but in the dark underworld. Your evil counterpart has somehow found a way into the Land Above and replaced you. Ahead of you is a long and arduous journey to make it back to the top.</p><button onclick='onwards()'>Onwards!</button>";
+contents[1][0] = "<p>You trudge along, alone and hungry. You see you're in a forest, so perhaps you can find some berries, nuts, or roots, whatever those are. Suddenly, a tall figure drops down in front of you. 'I am The Riddler. I know that you are not from here. I will appear to you and ask you questions and riddles over the course of your journey. As long as you continue to answer them all correctly, you will continue. If not...' You nod your head. The Riddler begins, 'Here is your first riddle: What has 54 hearts but no other organs?'</p><input text='text' id='answer' value='What is your answer?'><button onclick='check()'>Answer</button></input>";
 contents[1][1] = "<p>1Story in progress</p><button onclick='onwards()'>Onwards!</button>";
 contents[1][2] = "<p>2Story in progress</p>";
 
