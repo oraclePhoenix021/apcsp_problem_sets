@@ -41,12 +41,10 @@ function welcomeOnwards() {
 
 function onwards(option){
   if (option == welcome){
-    // game.innerHTML = welcome; console.log('restart');
-    // document.body.style.backgroundColor = "white";
     // document.body.style.backgroundColor = "white";
     // document.body.style.color = "black";
     location.reload();
-    game.innerHTML = contents[0][0];
+    // game.innerHTML = welcome;
   } else if (pos(0, 0)){
     ch++;
   } else if(ch != 0 && pt == 0){
