@@ -47,7 +47,7 @@ function onwards(option){
     // document.body.style.color = "black";
     location.reload();
     game.innerHTML = contents[0][0];
-  } else if (ch == 0 && pt == 0){
+  } else if (pos(0, 0)){
     ch++;
   } else if(ch != 0 && pt == 0){
     option == 1 ? pt = 1 : pt = 2;
@@ -58,17 +58,19 @@ function onwards(option){
   game.style.paddingTop = marginTop + "px";
 }
 
+function pos(x, y) {
+  if (ch == x && pt == y) return true;
+  else return false;
+}
+
 function check() {
   var ans;
   answer = String(document.getElementById('answer').value);
         // Answer cases
-        if (ch == 1 && pt == 0) ans = "cards";
+        if (pos(1, 0)) ans = "cards";
   var checkAnswer = answer.includes(ans);
-  if (checkAnswer) {
-    onwards(1);
-  } else {
-    onwards(2);
-  }
+  if (checkAnswer) onwards(1);
+  else onwards(2);
 }
 
 var ch = 0, pt = 0;
