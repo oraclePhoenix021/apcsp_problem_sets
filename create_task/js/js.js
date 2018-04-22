@@ -41,18 +41,20 @@ function welcomeOnwards() {
 
 function onwards(option){
   if (option == welcome){
-    // document.body.style.backgroundColor = "white";
-    // document.body.style.color = "black";
-    location.reload();
-    // game.innerHTML = welcome;
+    game.innerHTML = welcome;
+    document.body.style.backgroundColor = "white";
+    document.body.style.color = "black";
+    // location.reload();
   } else if (pos(0, 0)){
     ch++;
+    game.innerHTML = contents[ch][pt] + restart;
   } else if(ch != 0 && pt == 0){
     option == 1 ? pt = 1 : pt = 2;
+    game.innerHTML = contents[ch][pt] + restart;
   } else if (pt == 1){
     ch++; pt = 0;
+    game.innerHTML = contents[ch][pt] + restart;
   }
-  game.innerHTML = contents[ch][pt] + restart;
   game.style.paddingTop = marginTop + "px";
 }
 
