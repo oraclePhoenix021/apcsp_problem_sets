@@ -65,8 +65,9 @@ function pos(x, y) {
 function check() {
   var ans;
   answer = String(document.getElementById('answer').value);
-        // Answer cases
-        if (pos(1, 0)) ans = "cards";
+  // Answer cases /////////////
+  if (pos(1, 0)) ans = "cards";
+  /////////////////////////////
   var checkAnswer = answer.includes(ans);
   if (checkAnswer) onwards(1);
   else onwards(2);
