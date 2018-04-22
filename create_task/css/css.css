@@ -18,6 +18,8 @@ input, button {
 body {
   text-align: center;
   font-family: "Courier New", Courier, monospace;
+  background-color: white;
+  color: black;
 }
 
 /* h1, p, input, button {
