@@ -3,11 +3,9 @@ var name = "";
 var answer = "";
 
 // CSS
-var gameWidth = game.offsetWidth;
 var gameHeight = game.offsetHeight;
-var body = document.body, html = document.documentElement;
-var height = Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight);
-var pageHeight = height;
+var body = document.body, html = document.documentElement; // Credit: https://stackoverflow.com/a/1147768
+var pageHeight = Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight); // Credit: https://stackoverflow.com/a/1147768
 console.log(pageHeight);
 var marginTop = (pageHeight/2) - (gameHeight-(gameHeight/5));
 game.style.paddingTop = marginTop + "px";
