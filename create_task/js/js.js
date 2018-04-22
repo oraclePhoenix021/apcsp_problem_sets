@@ -45,6 +45,7 @@ function onwards(option){
     document.body.style.backgroundColor = "white";
     document.body.style.color = "black";
     // location.reload();
+    ch = 0; pt = 0;
   } else if (pos(0, 0)){
     ch++;
     game.innerHTML = contents[ch][pt] + restart;
