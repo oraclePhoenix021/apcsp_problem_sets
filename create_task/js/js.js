@@ -54,6 +54,8 @@ function check() {
   if (pos(1, 0)) ans = "cards";
   if (pos(2, 0)) ans = "promise";
   if (pos(3, 0)) ans = "joke";
+  if (pos(4, 0)) ans = "river";
+  if (pos(5, 0)) ans = "key";
   /////////////////////////////
   var checkAnswer = answer.includes(ans);
   if (checkAnswer) onwards(1);
@@ -77,10 +79,11 @@ contents[2][0] = "<p>You've made your way out of the woods and are on your way t
 contents[2][1] = "<p>'Well done.' In their wake, they leave behind a small bag with enough money to get you some hot food and a good night's rest. You're dead tired and fall asleep before your head even hits the pillow, dreaming about the Land Above.</p></p><button onclick='onwards()'>Onwards!</button>";
 contents[3][0] = "<p>When you wake up, you find yourself no longer in the room you'd rented the previous night, but rather robbed of what little you had and kicked outside with absolutely no clue where you are. While the town you found may be a kindly place Above, it's a little different Below. As you've come to expect by now, The Riddler appears, with a new challenge for you to prove yourself. 'I can be made and I can be played. I can be cracked and I can be told. What am I?'</p><input text='text' id='answer' placeholder='What is your answer?'/><button onclick='check()'>Answer</button>";
 contents[3][1] = "<p>The Riddler vanishes but you see nothing left behind. You look around confused, and then hear a branch snap behind you. You whirl around to find yourself face to face with your childhood nemesis. After all, even the nicest people can't stand everyone. However, it looks like down here your nemesis is actually quite nice and is willing to give you a hand. You explain your situation to him, and he tells you, 'Well, if you're looking to go back, you'll need to make your way to the castle.' He generously offers to guide you there, and so you set off with your new friend.</p><button onclick='onwards()'>Onwards!</button>";
-contents[4][0] = "<p></p><input text='text' id='answer' placeholder='What is your answer?'/><button onclick='check()'>Answer</button>";
+contents[4][0] = "<p>You and your friend make it to the castle, ready to face whatever may come. However, the strange backwards copy of your home is eerily quiet. You delve deeper into the castle, slowly and cautiously. So much for caution though, because as soon are you turn a corner, you're immediately faced with all of the evil twins of your own castle faculty back home. You regret not hiring people who weren't all that nice as you and you companion run away from the mini-army. You turn a sharp corner and hide your friend and yourself as the horde rushes by, though you won't remain hidden for long. The Riddler appears, asking, 'What has a bed but doesn't sleep and has a mouth but doesn't eat?'</p><input text='text' id='answer' placeholder='What is your answer?'/><button onclick='check()'>Answer</button>";
+contents[4][1] = "<p>The Riddler snaps their fingers and you and your company find yourselves whisked away, safe, for now, from the rouge underpaid workers.</p><button onclick='onwards()'>Onwards!</button>";
+contents[5][0] = "<p>If someone asked you where you were, you wouldn't be able to tell them, but somehow, you feel in your bones that the bright whirling portal in front of you leads home. Across the portal, however, is a magical bar, created, no doubt, by your evil counterpart as one final slap in your face. A math equation. You were never good at math. The Riddler appears. 'You wouldn't be able to just tell me the answer to this, would you?' you ask. 'For a riddle, perhaps. I turn around once. What is out will not get in. I turn around again. What is in will not get out. What am I?' It's your hardest riddle yet.</p><input text='text' id='answer' placeholder='What is your answer?'/><button onclick='check()'>Answer</button>";
+contents[5][1] = "<p>'Yes indeed.' The Riddler waves their hand, as the numbers '62442' appear over the bar, and then vanish altogether along with the barrier. You feel a sense of giddy excitement, and don't look back at your friend as you step through the portal, ready to return home.</p><br/><p>The End.</p>"
 
-"What has a bed but doesn't sleep and what has a mouth but doesn't eat? - a river"
-"What starts with m, ends with x, and has a never ending amount of letters? - a mailbox"
 
 contents[1][2] = "<p>Sorry "+name+", you tried.</p>"; contents[2][2] = "<p>Sorry "+name+", you tried.</p>";
 contents[3][2] = "<p>Sorry "+name+", you tried.</p>"; contents[4][2] = "<p>Sorry "+name+", you tried.</p>";
