@@ -10,31 +10,12 @@ console.log(pageHeight);
 var marginTop = (pageHeight/2) - (gameHeight-(gameHeight/5));
 game.style.paddingTop = marginTop + "px";
 
-// MUSIC
-// var sound = document.getElementById('audio');
-// var songs = [
-//   "east",
-//   "fading",
-//   "reprieve",
-//   "serity",
-//   "thru",
-//   "young"
-//   ];
-// var song = 0;
-// sound.onended = function(){
-//   if (song == songs.length - 1) song = 0;
-//   else song++;
-//   sound.src = "media/" + songs[song] + ".mp3";
-// }
-
 // GAME
 function welcomeOnwards() {
   name = String(document.getElementById('name').value);
   contents[0][0] = "<p>"+name+", you are a child of the royal family, loved by all. However, the better a person is in this world, the worse their counterpart down below. Unbeknownst to you, your evil twin plots in the Land Below. One horrible day, you wake to find yourself not in your own bed, warm and comfortable, but in the dark underworld. Your evil counterpart has somehow found a way into the Land Above and replaced you. Ahead of you is a long and arduous journey to make it back to the top.</p><button onclick='onwards()'>Onwards!</button>";
-  contents[1][2] = "<p>Sorry "+name+", you tried.</p>";
-  contents[2][2] = "<p>Sorry "+name+", you tried.</p>";
-  contents[3][2] = "<p>Sorry "+name+", you tried.</p>";
-  contents[4][2] = "<p>Sorry "+name+", you tried.</p>";
+  contents[1][2] = "<p>Sorry "+name+", you tried.</p>"; contents[2][2] = "<p>Sorry "+name+", you tried.</p>";
+  contents[3][2] = "<p>Sorry "+name+", you tried.</p>"; contents[4][2] = "<p>Sorry "+name+", you tried.</p>";
   contents[5][2] = "<p>Sorry "+name+", you tried.</p>";
   document.body.style.backgroundColor = "black";
   document.body.style.color = "white";
@@ -71,6 +52,7 @@ function check() {
   answer = String(document.getElementById('answer').value);
   // Answer cases /////////////
   if (pos(1, 0)) ans = "cards";
+  if (pos(2, 0)) ans = "promise";
   /////////////////////////////
   var checkAnswer = answer.includes(ans);
   if (checkAnswer) onwards(1);
@@ -90,7 +72,12 @@ var contents = [
 contents[0][0] = "<p>"+name+", you are a child of the royal family, loved by all. However, the better a person is in this world, the worse their counterpart down below. Unbeknownst to you, your evil twin plots in the Land Below. One horrible day, you wake to find yourself not in your own bed, warm and comfortable, but in the dark underworld. Your evil counterpart has somehow found a way into the Land Above and replaced you. Ahead of you is a long and arduous journey to make it back to the top.</p><button onclick='onwards()'>Onwards!</button>";
 contents[1][0] = "<p>You trudge along, alone and hungry. You see you're in a forest, so perhaps you can find some berries, nuts, or roots, whatever those are. Suddenly, a tall figure drops down in front of you. 'I am The Riddler. I know that you are not from here. I will appear to you and ask you questions and riddles over the course of your journey. As long as you continue to answer them all correctly, you will continue. If not...' You nod your head. The Riddler begins, 'Here is your first riddle: What has 13 hearts but no other organs?'</p><input text='text' id='answer' placeholder='What is your answer?'/><button onclick='check()'>Answer</button>";
 contents[1][1] = "<p>The Riddler bows their head and vanishes. You see, in the abandoned space, lies enough food to last you a week or so, longer if you ration it. You pick it up, and go about your way.</p><button onclick='onwards()'>Onwards!</button>";
-contents[2][0] = "<p>You've made your way out of the woods and are on your way to the nearby village. Hopefully, you'll be able to find better food and proper shelter from the elements.</p><button onclick='check()'>Answer</button>"
+contents[2][0] = "<p>You've made your way out of the woods and are on your way to the nearby village. Hopefully, you'll be able to find better food and proper shelter from the elements. However, just as you make it to town, you realize that whatever land you may be in, the world still runs on money, and you don't have any. You hear a familiar swoosh behind you and turn to find yourself face to face with The Riddler. 'Answer me this young stranger, what gets broken without being held?</p><input text='text' id='answer' placeholder='What is your answer?'/><button onclick='check()'>Answer</button>"
+contents[2][1] = "<p>'Well done.' In their wake, they leave behind a small bag with enough money to get you some hot food and a good night's rest. You're dead tired and fall asleep before your head even hits the pillow, dreaming about the Land Above.</p></p><button onclick='onwards()'>Onwards!</button>";
+contents[3][0] = "<p></p>";
+
+"What has a bed but doesn't sleep and what has a mouth but doesn't eat? - a river"
+"I can be made and I can be played. I can be cracked and I can be told. What am I? - a joke"
 
 contents[1][2] = "<p>Sorry "+name+", you tried.</p>"; contents[2][2] = "<p>Sorry "+name+", you tried.</p>";
 contents[3][2] = "<p>Sorry "+name+", you tried.</p>"; contents[4][2] = "<p>Sorry "+name+", you tried.</p>";
