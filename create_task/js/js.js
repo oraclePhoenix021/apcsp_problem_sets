@@ -96,19 +96,21 @@ var restart = "<button onclick='onwards(welcome)'>Restart</button>";
 var welcome = "<h1>Welcome!</h1><p>Welcome, player! First, before we begin your adventure, please enter your name:</p><input type='text' id='name' value='Karen'><button onclick='welcomeOnwards()' id='welcomeOnwards'>Onwards!</button>";
 
 function listeners() {
-  document.getElementById('name') // Credit: https://stackoverflow.com/a/155263
-    .addEventListener("keyup", function(event) {
-    event.preventDefault();
-    if (event.keyCode === 13) {
-      document.getElementById("welcomeOnwards").click();
-    }
-  });
-
-  document.getElementById('answer') // Credit: https://stackoverflow.com/a/155263
-    .addEventListener("keyup", function(event) {
-    event.preventDefault();
-    if (event.keyCode === 13) {
-      document.getElementById("answer-btn").click();
-    }
-  });
+  try {
+    document.getElementById('name') // Credit: https://stackoverflow.com/a/155263
+      .addEventListener("keyup", function(event) {
+      event.preventDefault();
+      if (event.keyCode === 13) {
+        document.getElementById("welcomeOnwards").click();
+      }
+    });
+  } catch (error) {
+    document.getElementById('answer') // Credit: https://stackoverflow.com/a/155263
+      .addEventListener("keyup", function(event) {
+      event.preventDefault();
+      if (event.keyCode === 13) {
+        document.getElementById("answer-btn").click();
+      }
+    });
+  }
 } listeners();
