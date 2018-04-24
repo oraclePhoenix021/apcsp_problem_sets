@@ -15,8 +15,9 @@ function welcomeOnwards() {
   name = String(document.getElementById('name').value);
   contents[0][0] = "<p>"+name+", you are a child of the royal family, loved by all. However, the better a person is in this world, the worse their counterpart down below. Unbeknownst to you, your evil twin plots in the Land Below. One horrible day, you wake to find yourself not in your own bed, warm and comfortable, but in the dark underworld. Your evil counterpart has somehow found a way into the Land Above and replaced you. Ahead of you is a long and arduous journey to make it back to the top.</p><button onclick='onwards()'>Onwards!</button>";
   contents[1][2] = "<p>Sorry "+name+", you tried.</p>"; contents[2][2] = "<p>Sorry "+name+", you tried.</p>";
-  contents[3][2] = "<p>Sorry "+name+", you tried.</p>"; contents[4][2] = "<p>Sorry "+name+", you tried.</p>";
-  contents[5][2] = "<p>Sorry "+name+", you tried.</p>";
+  contents[3][2] = "<p>Sorry "+name+", you tried.</p>";
+  contents[4][2] = "<p>Sorry "+name+", you tried, but your counterpart's underpaid employees got to you.</p>";
+  contents[5][2] = "<p>Sorry "+name+", you tried. You were oh so close too. Better luck next time.</p>";
   document.body.style.backgroundColor = "black";
   document.body.style.color = "white";
   game.innerHTML = contents[0][0] + restart;
@@ -86,8 +87,9 @@ contents[5][1] = "<p>'Yes indeed.' The Riddler waves their hand, as the numbers 
 
 
 contents[1][2] = "<p>Sorry "+name+", you tried.</p>"; contents[2][2] = "<p>Sorry "+name+", you tried.</p>";
-contents[3][2] = "<p>Sorry "+name+", you tried.</p>"; contents[4][2] = "<p>Sorry "+name+", you tried.</p>";
-contents[5][2] = "<p>Sorry "+name+", you tried.</p>";
+contents[3][2] = "<p>Sorry "+name+", you tried.</p>";
+contents[4][2] = "<p>Sorry "+name+", you tried, but your counterpart's underpaid employees got to you.</p>";
+contents[5][2] = "<p>Sorry "+name+", you tried. You were oh so close too. Better luck next time.</p>";
 
 var restart = "<button onclick='onwards(welcome)'>Restart</button>";
 var welcome = "<h1>Welcome!</h1><p>Welcome, player! First, before we begin your adventure, please enter your name:</p><input type='text' id='name' value='Karen'><button onclick='welcomeOnwards()'>Onwards!</button>";
