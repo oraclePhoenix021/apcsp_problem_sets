@@ -23,12 +23,31 @@ function welcomeOnwards() {
   game.innerHTML = contents[0][0] + restart;
 }
 
+function listeners() {
+  try {
+    document.getElementById('name') // Credit: https://stackoverflow.com/a/155263
+      .addEventListener("keyup", function(event) {
+      event.preventDefault();
+      if (event.keyCode === 13) {
+        document.getElementById("welcomeOnwards").click();
+      }
+    });
+  } catch (error) {
+    document.getElementById('answer') // Credit: https://stackoverflow.com/a/155263
+      .addEventListener("keyup", function(event) {
+      event.preventDefault();
+      if (event.keyCode === 13) {
+        document.getElementById("answer-btn").click();
+      }
+    });
+  }
+} listeners();
+
 function onwards(option){
   if (option == welcome){
     game.innerHTML = welcome;
     document.body.style.backgroundColor = "white";
     document.body.style.color = "black";
-    // location.reload();
     ch = 0; pt = 0;
   } else if (pos(0, 0)){
     ch++;
@@ -94,23 +113,3 @@ contents[5][2] = "<p>Sorry "+name+", you tried. You were oh so close too. Better
 
 var restart = "<button onclick='onwards(welcome)'>Restart</button>";
 var welcome = "<h1>Welcome!</h1><p>Welcome, player! First, before we begin your adventure, please enter your name:</p><input type='text' id='name' value='Karen'><button onclick='welcomeOnwards()' id='welcomeOnwards'>Onwards!</button>";
-
-function listeners() {
-  try {
-    document.getElementById('name') // Credit: https://stackoverflow.com/a/155263
-      .addEventListener("keyup", function(event) {
-      event.preventDefault();
-      if (event.keyCode === 13) {
-        document.getElementById("welcomeOnwards").click();
-      }
-    });
-  } catch (error) {
-    document.getElementById('answer') // Credit: https://stackoverflow.com/a/155263
-      .addEventListener("keyup", function(event) {
-      event.preventDefault();
-      if (event.keyCode === 13) {
-        document.getElementById("answer-btn").click();
-      }
-    });
-  }
-} listeners();
