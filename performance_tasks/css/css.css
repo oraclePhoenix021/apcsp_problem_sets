@@ -1,13 +1,9 @@
 #game {
     position: absolute;
     width: 99vw;
-    /* height: 99vh; */
     left: 1;
     top: 1;
-    /* background-color: white; */
     font-family: "Courier New", Courier, monospace;
-    /* display: flex; */
-    /* align-items: center; */
 }
 
 input, button {
@@ -21,10 +17,6 @@ body {
   background-color: white;
   color: black;
 }
-
-/* h1, p, input, button {
-  display: block;
-} */
 
 p {
   width: 50%;
